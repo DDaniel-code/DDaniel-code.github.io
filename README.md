@@ -1,6 +1,7 @@
 # Zhiyuan Daniel Yang — Personal Site
 
-A minimal, responsive personal website built as plain HTML and CSS for GitHub Pages.
+A minimal, responsive personal website built with plain HTML, CSS, and a small progressive
+enhancement for the scroll-linked bouldering route.
 
 ## GitHub Pages
 

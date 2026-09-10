@@ -20,13 +20,41 @@
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
 
+    <div class="climbing-route" aria-hidden="true">
+      <svg viewBox="0 0 160 600" focusable="false">
+        <path
+          class="route-line"
+          d="M112 552 C132 510 91 473 107 430 C121 393 75 359 90 319 C104 280 71 243 84 204 C98 164 73 124 91 82 C97 69 104 58 111 48"
+        />
+        <g class="holds">
+          <path d="M99 545c8-7 20-7 27 0l-4 15-20 2-7-8z" />
+          <path d="M78 489c6-8 18-11 26-5l-2 14-18 6-9-7z" />
+          <path d="M106 426c7-7 20-5 25 3l-6 14-19-1-5-8z" />
+          <path d="M65 373c9-6 22-3 26 7l-8 12-19-3-3-8z" />
+          <path d="M82 311c6-8 18-10 25-4l-3 14-18 5-8-7z" />
+          <path d="M53 255c7-7 18-6 24 1l-4 13-18 2-6-8z" />
+          <path d="M77 194c6-8 19-8 26-1l-5 14-19 3-6-8z" />
+          <path d="M62 135c8-6 20-3 24 6l-7 12-18-2-4-8z" />
+          <path d="M98 70c7-8 20-8 27 0l-4 15-20 3-7-9z" />
+        </g>
+        <g class="climber" transform="translate(89 313)">
+          <circle cx="0" cy="-14" r="5" />
+          <path d="M0-8 L-2 8 M-1-2 L-14-9 M-1 1 L12-8 M-2 8 L-12 21 M-2 8 L9 22" />
+        </g>
+      </svg>
+    </div>
+
     <header>
       <h1>Zhiyuan Yang</h1>
       <p class="subtext intro-copy">
-        I study Business Intelligence and Data Analytics at Carnegie Mellon University.
-        I’m interested in applied AI, empirical machine learning, and systems. Reach me at
-        <a href="mailto:zhiyuan912912@gmail.com">zhiyuan912912 (at) gmail (dot) com</a>.
+        I study MISM-BIDA at Carnegie Mellon University. I’m interested in applied AI,
+        empirical machine learning, and systems.
       </p>
+      <svg class="mobile-holds" viewBox="0 0 180 42" aria-hidden="true" focusable="false">
+        <path d="M8 22c8-8 22-8 30 0l-5 14-21 1-8-8z" />
+        <path d="M73 8c7-7 19-7 26 0l-4 13-18 2-7-8z" />
+        <path d="M137 20c8-7 21-5 26 3l-7 12-19-2-4-7z" />
+      </svg>
     </header>
 
     <main id="content">
@@ -51,15 +79,17 @@
           <li>
             <h3>Supply Chain Data Scientist Intern @ Yanfeng Automotive</h3>
             <p class="subtext">
-              Built forecasting and analytics workflows supporting daily planning, including
-              visibility into $20.3M of inventory and analysis of $1.27M in expedited-order overruns.
+              Built forecasting and ERP-connected analytics workflows that unified inventory,
+              demand, and expedited-order signals for daily planning, supplier discussions, and
+              tighter approval controls.
             </p>
           </li>
           <li>
             <h3>Supply Chain Data Analyst Intern @ Youhua</h3>
             <p class="subtext">
-              Modeled $971K+ in production spending and proposed changes expected to reduce
-              supply costs by 8%.
+              Built cost-revenue models and interactive dashboards that surfaced resource-use
+              patterns and recoverable materials, supporting a management proposal expected to
+              reduce supply costs by 8%.
             </p>
           </li>
           <li>
@@ -83,17 +113,26 @@
             </p>
           </li>
           <li>
-            <h3>Deep Learning-Based Wi-Fi PHY Layer Decoding</h3>
+            <h3>
+              <a href="https://github.com/DDaniel-code/wifi-signal-decoding"
+                >Deep Learning-Based Wi-Fi PHY Layer Decoding</a
+              >
+              <span class="meta">— UNC Data Science Practicum · Team Project</span>
+            </h3>
             <p class="subtext">
-              Ran 21 model and training variants on 70K+ packets, improving CrossMAE ExactMatch
-              from 65.73% to 93.55% while reducing transmission-duration prediction error.
+              Investigated whether low-bandwidth receivers could recover complete 24-bit L-SIG
+              headers using CNN and masked-autoencoder experiments. Team project mentored by
+              Dr. Zhihui Gao.
             </p>
           </li>
           <li>
-            <h3>Idealab Persona Simulation Engine</h3>
+            <h3>
+              <a href="https://github.com/JJ69c/IdeaLab">IdeaLab Persona Simulation Research</a>
+            </h3>
             <p class="subtext">
-              Built a full-stack product-idea simulator with 30 AI personas, streamed reactions,
-              variant comparison, and synthesis reports for under $0.15 per run.
+              I focus on research around persona design, evaluation questions, and synthesis
+              methods for the simulator. <a href="https://github.com/JJ69c">William (@JJ69c)</a>
+              wrote all application code.
             </p>
           </li>
           <li>
@@ -137,7 +176,8 @@
         <h2 id="interests-heading">Interests</h2>
         <p class="subtext">
           LLM evaluation, agentic systems, RAG-enabled knowledge systems, responsible AI,
-          human–AI collaboration, and applied modeling for decision support.
+          human–AI collaboration, and applied modeling for decision support. Away from the
+          screen, I’m usually bouldering.
         </p>
       </section>
     </main>
@@ -150,5 +190,6 @@
         <a href="https://www.linkedin.com/in/danielyang/">LinkedIn</a>
       </p>
     </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>
