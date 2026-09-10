@@ -15,31 +15,84 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260910-bouldering" />
+    <link rel="stylesheet" href="styles.css?v=20260910-climber" />
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
 
     <div class="climbing-route" aria-hidden="true">
       <svg viewBox="0 0 160 600" focusable="false">
+        <defs>
+          <pattern id="wall-bolts" width="26" height="26" patternUnits="userSpaceOnUse">
+            <circle cx="7" cy="8" r="1.15" />
+          </pattern>
+        </defs>
+        <path
+          class="wall-panel"
+          d="M42 8 C69 1 122 4 147 20 L154 573 C124 594 73 596 41 583 Z"
+        />
+        <path
+          class="wall-bolts"
+          d="M42 8 C69 1 122 4 147 20 L154 573 C124 594 73 596 41 583 Z"
+        />
         <path
           class="route-line"
           d="M112 552 C132 510 91 473 107 430 C121 393 75 359 90 319 C104 280 71 243 84 204 C98 164 73 124 91 82 C97 69 104 58 111 48"
         />
         <g class="holds">
-          <path d="M99 545c8-7 20-7 27 0l-4 15-20 2-7-8z" />
-          <path d="M78 489c6-8 18-11 26-5l-2 14-18 6-9-7z" />
-          <path d="M106 426c7-7 20-5 25 3l-6 14-19-1-5-8z" />
-          <path d="M65 373c9-6 22-3 26 7l-8 12-19-3-3-8z" />
-          <path d="M82 311c6-8 18-10 25-4l-3 14-18 5-8-7z" />
-          <path d="M53 255c7-7 18-6 24 1l-4 13-18 2-6-8z" />
-          <path d="M77 194c6-8 19-8 26-1l-5 14-19 3-6-8z" />
-          <path d="M62 135c8-6 20-3 24 6l-7 12-18-2-4-8z" />
-          <path d="M98 70c7-8 20-8 27 0l-4 15-20 3-7-9z" />
+          <g class="hold hold-yellow">
+            <path d="M93 541c7-10 26-11 36-1l-4 19-27 3-10-10z" />
+            <circle cx="111" cy="550" r="1.7" />
+          </g>
+          <g class="hold hold-teal">
+            <path d="M67 479c7-9 23-12 34-5l1 17-25 10-13-8z" />
+            <circle cx="84" cy="488" r="1.7" />
+          </g>
+          <g class="hold hold-orange">
+            <path d="M106 414c11-7 28-3 32 8l-8 18-24-2-6-12z" />
+            <circle cx="120" cy="426" r="1.7" />
+          </g>
+          <g class="hold hold-purple">
+            <path d="M49 363c8-11 27-9 33 3l-8 18-24 0-7-11z" />
+            <circle cx="64" cy="373" r="1.7" />
+          </g>
+          <g class="hold hold-blue">
+            <path d="M77 299c8-10 26-10 34 0l-5 20-25 6-9-12z" />
+            <circle cx="94" cy="311" r="1.7" />
+          </g>
+          <g class="hold hold-green">
+            <path d="M47 247c8-9 23-9 31 0l-5 17-23 5-8-10z" />
+            <circle cx="62" cy="257" r="1.7" />
+          </g>
+          <g class="hold hold-orange">
+            <path d="M78 179c9-8 26-6 32 5l-8 18-25 4-7-13z" />
+            <circle cx="93" cy="191" r="1.7" />
+          </g>
+          <g class="hold hold-teal">
+            <path d="M51 122c10-7 26-3 30 8l-9 16-23-4-5-11z" />
+            <circle cx="65" cy="133" r="1.7" />
+          </g>
+          <g class="hold hold-yellow">
+            <path d="M95 58c8-10 26-11 36-1l-3 19-28 6-10-11z" />
+            <circle cx="112" cy="68" r="1.7" />
+          </g>
         </g>
         <g class="climber" transform="translate(89 313)">
-          <circle cx="0" cy="-14" r="5" />
-          <path d="M0-8 L-2 8 M-1-2 L-14-9 M-1 1 L12-8 M-2 8 L-12 21 M-2 8 L9 22" />
+          <g class="climber-pose" transform="rotate(-7)">
+            <path class="limb skin" d="M-8-17 C-18-15-23-25-30-31" />
+            <circle class="skin-fill" cx="-31" cy="-32" r="3.7" />
+            <path class="limb skin" d="M8-18 C17-25 18-39 23-49" />
+            <circle class="skin-fill" cx="24" cy="-51" r="3.7" />
+            <path class="leg pants" d="M-5 10 C-13 23-11 39-24 51" />
+            <path class="leg pants" d="M6 10 C19 17 27 27 34 39" />
+            <path class="shoe" d="M-27 48 L-36 54" />
+            <path class="shoe" d="M31 40 L38 47" />
+            <path class="torso" d="M-11-20 Q0-25 11-18 L9 9 Q0 15-9 10 Z" />
+            <path class="waist" d="M-9 8 Q0 13 9 8 L10 15 Q0 19-10 14 Z" />
+            <rect class="neck" x="-3.2" y="-27" width="6.4" height="7" rx="2" />
+            <circle class="skin-fill" cx="0" cy="-34" r="8" />
+            <path class="hair" d="M-8-35 Q-5-45 4-43 Q12-40 7-30 L3-36 Q-2-33-8-35Z" />
+          </g>
         </g>
       </svg>
     </div>
@@ -51,9 +104,9 @@
         empirical machine learning, and systems.
       </p>
       <svg class="mobile-holds" viewBox="0 0 180 42" aria-hidden="true" focusable="false">
-        <path d="M8 22c8-8 22-8 30 0l-5 14-21 1-8-8z" />
-        <path d="M73 8c7-7 19-7 26 0l-4 13-18 2-7-8z" />
-        <path d="M137 20c8-7 21-5 26 3l-7 12-19-2-4-7z" />
+        <path class="hold-orange" d="M8 22c8-8 22-8 30 0l-5 14-21 1-8-8z" />
+        <path class="hold-teal" d="M73 8c7-7 19-7 26 0l-4 13-18 2-7-8z" />
+        <path class="hold-yellow" d="M137 20c8-7 21-5 26 3l-7 12-19-2-4-7z" />
       </svg>
     </header>
 
@@ -128,11 +181,14 @@
           <li>
             <h3>
               <a href="https://github.com/JJ69c/IdeaLab">IdeaLab Persona Simulation Research</a>
+              <span class="meta"
+                >— Collaboration with
+                <a href="https://github.com/JJ69c">@JJ69c</a></span
+              >
             </h3>
             <p class="subtext">
-              I focus on research around persona design, evaluation questions, and synthesis
-              methods for the simulator. <a href="https://github.com/JJ69c">William (@JJ69c)</a>
-              wrote all application code.
+              Researched and prototyped persona design, multi-persona simulation, response
+              distillation, and synthesis workflows for an AI product-idea simulator.
             </p>
           </li>
           <li>
@@ -190,6 +246,6 @@
         <a href="https://www.linkedin.com/in/danielyang/">LinkedIn</a>
       </p>
     </footer>
-    <script src="script.js?v=20260910-bouldering" defer></script>
+    <script src="script.js?v=20260910-climber" defer></script>
   </body>
 </html>

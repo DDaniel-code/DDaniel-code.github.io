@@ -6,6 +6,13 @@
   --hover: #666666;
   --rule: #eeeeee;
   --rock: #8b7463;
+  --wall: #f7f3ec;
+  --orange: #d86f43;
+  --yellow: #e4b93f;
+  --teal: #4f9995;
+  --blue: #547fae;
+  --purple: #846d9b;
+  --green: #598a70;
 }
 
 * {
@@ -39,7 +46,7 @@ body {
   min-height: 480px;
   max-height: 680px;
   color: var(--rock);
-  opacity: 0.68;
+  opacity: 0.92;
   pointer-events: none;
 }
 
@@ -52,40 +59,120 @@ body {
 
 .route-line {
   fill: none;
-  stroke: currentColor;
-  stroke-width: 1.25;
-  stroke-dasharray: 3 8;
-  opacity: 0.38;
+  stroke: var(--orange);
+  stroke-width: 1.15;
+  stroke-dasharray: 2 9;
+  opacity: 0.3;
+}
+
+.wall-panel {
+  fill: var(--wall);
+  opacity: 0.82;
+}
+
+.wall-bolts {
+  fill: url("#wall-bolts");
+  opacity: 0.45;
+}
+
+#wall-bolts circle {
+  fill: #cfc8bd;
 }
 
 .holds {
+  filter: drop-shadow(0 1.5px 1px rgb(49 42 37 / 12%));
+}
+
+.hold path,
+.hold > path {
   fill: currentColor;
-  opacity: 0.32;
 }
 
-.holds path:nth-child(3n + 2) {
-  opacity: 0.68;
+.hold circle {
+  fill: rgb(255 255 255 / 58%);
 }
 
-.holds path:nth-child(3n) {
-  opacity: 0.48;
+.hold-orange {
+  color: var(--orange);
+  fill: var(--orange);
+}
+
+.hold-yellow {
+  color: var(--yellow);
+  fill: var(--yellow);
+}
+
+.hold-teal {
+  color: var(--teal);
+  fill: var(--teal);
+}
+
+.hold-blue {
+  color: var(--blue);
+  fill: var(--blue);
+}
+
+.hold-purple {
+  color: var(--purple);
+  fill: var(--purple);
+}
+
+.hold-green {
+  color: var(--green);
+  fill: var(--green);
 }
 
 .climber {
-  color: var(--heading);
   will-change: transform;
+  filter: drop-shadow(0 2px 1.5px rgb(38 34 31 / 20%));
 }
 
-.climber circle {
-  fill: currentColor;
+.climber-pose {
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
-.climber path {
+.climber .limb,
+.climber .leg,
+.climber .shoe {
   fill: none;
-  stroke: currentColor;
-  stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.climber .skin {
+  stroke: #b97c5b;
+  stroke-width: 6;
+}
+
+.climber .skin-fill,
+.climber .neck {
+  fill: #c88b68;
+}
+
+.climber .torso {
+  fill: #f5f1ea;
+  stroke: #c9c3ba;
+  stroke-width: 0.8;
+}
+
+.climber .waist,
+.climber .pants {
+  fill: #263746;
+  stroke: #263746;
+}
+
+.climber .leg {
+  stroke-width: 9;
+}
+
+.climber .shoe {
+  stroke: #24282b;
+  stroke-width: 5;
+}
+
+.climber .hair {
+  fill: #383331;
 }
 
 .mobile-holds {
@@ -208,9 +295,9 @@ footer p {
 
 @media (max-width: 1199px) and (min-width: 641px) {
   .climbing-route {
-    right: 0;
-    width: 82px;
-    opacity: 0.34;
+    right: -5px;
+    width: 102px;
+    opacity: 0.58;
   }
 }
 
@@ -228,9 +315,8 @@ footer p {
     width: 116px;
     height: auto;
     margin-top: 1rem;
-    color: var(--rock);
-    fill: currentColor;
-    opacity: 0.28;
+    opacity: 0.68;
+    filter: drop-shadow(0 1px 1px rgb(49 42 37 / 10%));
   }
 
   h1 {
