@@ -170,6 +170,21 @@ h3 {
   line-height: 1.45;
 }
 
+.entry-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 1rem;
+  align-items: baseline;
+}
+
+.entry-date {
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 400;
+  text-align: right;
+  white-space: nowrap;
+}
+
 section {
   margin-bottom: 1.35rem;
 }
@@ -295,6 +310,15 @@ footer p {
 
   li {
     margin-bottom: 0.8rem;
+  }
+
+  .entry-heading {
+    grid-template-columns: 1fr;
+    row-gap: 0.05rem;
+  }
+
+  .entry-date {
+    text-align: left;
   }
 
   footer {
