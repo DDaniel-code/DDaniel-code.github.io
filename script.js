@@ -1,9 +1,36 @@
 (() => {
+  // CareMatch gallery: a thumbnail swaps the large screenshot.
+  const image = document.getElementById("feature-image");
+  const link = document.getElementById("feature-link");
+  const thumbs = [...document.querySelectorAll(".thumb")];
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      image.src = thumb.dataset.full;
+      image.alt = thumb.dataset.alt;
+      link.href = thumb.dataset.full;
+      thumbs.forEach((other) => {
+        const active = other === thumb;
+        other.classList.toggle("is-active", active);
+        other.setAttribute("aria-pressed", String(active));
+      });
+    });
+  });
+
+  // The top bar gets a rule once the page has scrolled under it.
+  const nav = document.querySelector(".site-nav");
+  if (nav) {
+    const mark = () => nav.classList.toggle("is-stuck", window.scrollY > 8);
+    window.addEventListener("scroll", mark, { passive: true });
+    mark();
+  }
+})();
+
+(() => {
   const climber = document.querySelector(".climber");
   if (!climber) return;
 
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const desktop = window.matchMedia("(min-width: 1100px)");
+  const desktop = window.matchMedia("(min-width: 1300px)");
   const holds = [...document.querySelectorAll(".climbing-route .holds use")]
     .map((hold) => ({ x: Number(hold.getAttribute("x")), y: Number(hold.getAttribute("y")) }));
   const limbs = [...climber.querySelectorAll("[data-limb]")];

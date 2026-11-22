@@ -5,17 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Zhiyuan Daniel Yang — AI/ML and data science candidate at Carnegie Mellon University."
+      content="Zhiyuan (Daniel) Yang builds applied AI and ML systems. Master's student at Carnegie Mellon University, seeking Summer 2027 internships in AI/ML and data science."
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ddaniel-code.github.io/" />
+    <meta property="og:title" content="Zhiyuan (Daniel) Yang" />
+    <meta
+      property="og:description"
+      content="Applied AI and ML systems. Projects, experience and contact."
+    />
+    <meta property="og:image" content="https://ddaniel-code.github.io/assets/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>Zhiyuan (Daniel) Yang</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,400..600&family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260914-portfolio-a" />
+    <link rel="stylesheet" href="styles.css?v=20261122-redesign-a" />
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -67,27 +78,51 @@
       </svg>
     </div>
 
-    <header>
-      <h1>Zhiyuan (Daniel) Yang</h1>
-      <p class="subtext intro-copy">
-        Master of Information Systems Management candidate at Carnegie Mellon University,
-        graduating December 2027. B.S. in Statistics and Data Science from UNC–Chapel Hill.
-      </p>
-      <p class="subtext intro-copy">
-        Seeking Summer 2027 internships in AI/ML and data science.
-      </p>
-      <p class="subtext intro-copy">
-        Also open to early-2028 new-grad roles in AI systems–oriented software engineering.
-      </p>
-      <p class="skills-line"><span>Skills &amp; tools:</span> Python · SQL · R · PyTorch · Hugging Face Transformers · Power BI</p>
-      <p class="focus-line"><span>Technical focus:</span> LLM evaluation · ML modeling · data pipelines</p>
-      <nav class="contact-links" aria-label="Contact and profile links">
-        <a href="https://github.com/DDaniel-code">GitHub</a>
-        <span aria-hidden="true">·</span>
-        <a href="https://www.linkedin.com/in/daniel-yang912">LinkedIn</a>
-        <span aria-hidden="true">·</span>
-        <a href="mailto:zhiyuan912912@gmail.com">Email</a>
-      </nav>
+    <nav class="site-nav" aria-label="Sections">
+      <a class="site-mark" href="#top">Daniel Yang</a>
+      <div class="site-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header id="top" class="hero">
+      <div class="hero-copy">
+        <h1>
+          <span class="hello">Nice to e-meet you,</span>
+          I’m Zhiyuan (Daniel) Yang.
+        </h1>
+        <p class="lead">
+          I build applied AI and ML systems, and I come from statistics and data science. I’m a
+          master’s student at Carnegie Mellon University (MISM, Business Intelligence &amp; Data
+          Analytics), graduating December 2027, with a B.S. in Statistics and Data Science from
+          UNC–Chapel Hill.
+        </p>
+        <p class="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Seeking Summer 2027 internships in AI/ML and data science
+        </p>
+        <p class="status-note">
+          Also open to early-2028 new-grad roles in AI systems–oriented software engineering.
+        </p>
+        <nav class="contact-links" aria-label="Contact and profile links">
+          <a class="button button-primary" href="mailto:zhiyuan912912@gmail.com">Email me</a>
+          <a class="button" href="https://github.com/DDaniel-code">GitHub</a>
+          <a class="button" href="https://www.linkedin.com/in/daniel-yang912">LinkedIn</a>
+        </nav>
+        <dl class="toolbox">
+          <div>
+            <dt>Skills &amp; tools</dt>
+            <dd>Python · SQL · R · PyTorch · scikit-learn · Hugging Face Transformers · Streamlit · Databricks · Power BI</dd>
+          </div>
+          <div>
+            <dt>Technical focus</dt>
+            <dd>LLM evaluation · ML modeling · data pipelines</dd>
+          </div>
+        </dl>
+      </div>
       <svg class="mobile-climber" viewBox="0 0 130 72" aria-hidden="true" focusable="false">
         <use href="#climbing-hold" class="hold-orange" x="63" y="12" />
         <use href="#climbing-hold" class="hold-teal" x="63" y="62" />
@@ -97,7 +132,214 @@
     </header>
 
     <main id="content">
-      <section aria-labelledby="experience-heading">
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+
+        <article class="feature">
+          <div class="feature-media">
+            <a class="shot" id="feature-link" href="assets/carematch-results.webp">
+              <img
+                id="feature-image"
+                src="assets/carematch-results.webp"
+                width="1600"
+                height="1000"
+                alt="CareMatch results for dialysis in Delhi: three facilities with quoted evidence, next to a map"
+              />
+            </a>
+            <div class="thumbs" role="group" aria-label="More CareMatch screenshots">
+              <button type="button" class="thumb is-active" aria-pressed="true"
+                data-full="assets/carematch-results.webp"
+                data-alt="CareMatch results for dialysis in Delhi: three facilities with quoted evidence, next to a map">
+                <img src="assets/carematch-results.webp" width="1600" height="1000" alt="" loading="lazy" />
+                <span>Results</span>
+              </button>
+              <button type="button" class="thumb" aria-pressed="false"
+                data-full="assets/carematch-evidence.webp"
+                data-alt="CareMatch evidence details for one facility: what the records say and why the evidence tier was assigned">
+                <img src="assets/carematch-evidence.webp" width="1600" height="1000" alt="" loading="lazy" />
+                <span>Evidence</span>
+              </button>
+              <button type="button" class="thumb" aria-pressed="false"
+                data-full="assets/carematch-plan.webp"
+                data-alt="CareMatch verification map for planners: a three-call plan aimed at areas where caesareans are rare">
+                <img src="assets/carematch-plan.webp" width="1600" height="1000" alt="" loading="lazy" />
+                <span>Call plan</span>
+              </button>
+              <button type="button" class="thumb" aria-pressed="false"
+                data-full="assets/carematch-home.webp"
+                data-alt="CareMatch home page with the search form">
+                <img src="assets/carematch-home.webp" width="1600" height="1000" alt="" loading="lazy" />
+                <span>Home</span>
+              </button>
+            </div>
+          </div>
+          <div class="feature-body">
+            <p class="kicker">CMU × Databricks Datathon · Nov 2026 · Team of two</p>
+            <h3><a href="https://github.com/DDaniel-code/carematch">CareMatch</a></h3>
+            <p class="tagline">Find the right care in India, and know why to trust the answer.</p>
+            <p>
+              A health worker picks a service and a place; CareMatch returns up to three facilities
+              and quotes the sentence in each record that supports the suggestion. Under the hood: a
+              claim-level text classifier, location cross-checks, a positive-unlabeled model that
+              finds facilities worth verifying, and a maximum-coverage optimizer that tells NGO
+              planners whom to call first.
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>scikit-learn</li><li>Streamlit</li><li>Databricks</li>
+            </ul>
+            <p class="links">
+              <a href="https://github.com/DDaniel-code/carematch">Code</a>
+              <a href="https://github.com/DDaniel-code/carematch/blob/main/CareMatch.ipynb">Notebook</a>
+              <a href="https://drive.google.com/file/d/10Rhk7EOS42YudWVIZFz0DcujLDztApqp/view">Demo video</a>
+            </p>
+          </div>
+          <ul class="facts">
+            <li><strong>10,088</strong><span>web-extracted facility records</span></li>
+            <li><strong>9%</strong><span>of caesarean keyword matches are real claims</span></li>
+            <li><strong>0.84</strong><span>ROC-AUC on regions the model never saw</span></li>
+          </ul>
+        </article>
+
+        <div class="cards">
+          <article class="card">
+            <a class="shot" href="https://github.com/JJ69c/IdeaLab">
+              <img src="assets/idealab.webp" width="1200" height="750" loading="lazy"
+                alt="IdeaLab simulation view: a network of simulated personas reacting to a product idea, with an event feed" />
+            </a>
+            <div class="card-body">
+              <p class="kicker">Research collaboration · Jan – May 2026</p>
+              <h3><a href="https://github.com/JJ69c/IdeaLab">IdeaLab</a></h3>
+              <p>
+                A synthetic-population idea tester: 30 AI personas across 8 behavioural archetypes
+                react to a product idea, talk to each other, and adopt or reject it over eight
+                rounds. I researched and prototyped persona design and evaluation, with William
+                (@JJ69c).
+              </p>
+              <ul class="tags"><li>LLM agents</li><li>FastAPI</li><li>React</li><li>SQLite</li></ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="shot shot-figure" href="https://github.com/DDaniel-code/UNC-wifi-signal-decoding">
+              <img src="assets/wifi-results.webp" width="1200" height="711" loading="lazy"
+                alt="Bar chart of exact-match accuracy on the test set for DeepMon, RIS-MAE and CrossMAE variants" />
+            </a>
+            <div class="card-body">
+              <p class="kicker">UNC Data Science Practicum · Jan – May 2026</p>
+              <h3><a href="https://github.com/DDaniel-code/UNC-wifi-signal-decoding">Wi-Fi Signal Decoding</a></h3>
+              <p>
+                Evaluated CNN and masked-autoencoder approaches for decoding 24-bit Wi-Fi headers
+                from low-bandwidth IQ signals. Mentored by Dr. Zhihui Gao. The chart is from the
+                project’s recorded results.
+              </p>
+              <ul class="tags"><li>PyTorch</li><li>Masked autoencoders</li><li>Signal processing</li></ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="shot shot-figure" href="https://github.com/DDaniel-code/dreamer-pixels">
+              <img src="assets/dreamer-pilot.webp" width="1200" height="679" loading="lazy"
+                alt="Training return over 100,000 environment steps for a single-seed Cartpole swing-up pilot" />
+            </a>
+            <div class="card-body">
+              <p class="kicker">CMU 11-785 Intro to Deep Learning · Aug 2026 – present <span class="chip">In progress</span></p>
+              <h3><a href="https://github.com/DDaniel-code/dreamer-pixels">Reinforcement Learning from Pixels</a></h3>
+              <p>
+                Researching DreamerV1-style latent world models for visual control from pixels, with
+                responsibility for literature review and training scripts for DeepMind Control Suite
+                experiments. The curve is a single-seed pilot run.
+              </p>
+              <ul class="tags"><li>PyTorch</li><li>World models</li><li>DeepMind Control Suite</li></ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="shot">
+              <img src="assets/retention-agent.webp" width="1200" height="750" loading="lazy"
+                alt="Risk dashboard of the John Data Lab course's customer-retention reference app, running locally" />
+            </div>
+            <div class="card-body">
+              <p class="kicker">John Data Lab · AI agent cohort <span class="chip">Project, in progress</span></p>
+              <h3>Enterprise Retention Agent</h3>
+              <p>
+                Working through an end-to-end reference system: ETL and data-quality checks, a churn
+                model, and a multi-agent retention copilot served through FastAPI and Streamlit. The
+                screenshot is the course’s reference app running on my machine; my own extensions
+                come next.
+              </p>
+              <ul class="tags"><li>ETL</li><li>Churn modeling</li><li>Agents</li><li>FastAPI</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="more-heading">More work</h3>
+        <ul class="entries">
+          <li>
+            <h3 class="entry-heading">
+              <span>
+                <a href="https://github.com/DDaniel-code/2026-data-challenge-forecasting"
+                  >Multi-Horizon Power Outage Forecasting</a
+                >
+                <span class="meta">· INFORMS 2026 Data Mining Society Data Challenge</span>
+              </span>
+              <time class="entry-date">08/2026 – 09/2026</time>
+            </h3>
+            <p class="subtext">
+              Developed a multi-horizon power outage forecasting pipeline using ExtraTrees,
+              LightGBM, and CatBoost, with county-disjoint cross-validation to evaluate
+              generalization to unseen counties.
+            </p>
+          </li>
+          <li>
+            <h3 class="entry-heading">
+              <span>
+                <a href="https://github.com/DDaniel-code/geospatial-rice-mapping"
+                  >Satellite-Based Rice Mapping</a
+                >
+                <span class="meta">· Team Project</span>
+              </span>
+              <time class="entry-date">09/2025 – 12/2025</time>
+            </h3>
+            <p class="subtext">
+              Co-developed a dual-stream CNN combining radar and optical satellite imagery
+              to classify rice fields for food-security analysis.
+            </p>
+          </li>
+          <li>
+            <h3 class="entry-heading">
+              <span>Crop Diversity &amp; Insurance Risk <span class="meta">· UNC DATA 543</span></span>
+              <time class="entry-date">01/2026 – 05/2026</time>
+            </h3>
+            <p class="subtext">
+              Built a county-year modeling pipeline using USDA data to study crop diversity,
+              insurance loss ratios, and claim volatility.
+            </p>
+          </li>
+          <li>
+            <h3 class="entry-heading">
+              <span>GPU Inference Benchmarking <span class="chip">In progress</span></span>
+              <time class="entry-date">08/2026 – Present</time>
+            </h3>
+            <p class="subtext">
+              Building a controlled benchmarking workflow to compare vLLM and Hugging Face
+              Transformers across A100 and V100 GPUs, concurrency levels, and context lengths.
+            </p>
+          </li>
+          <li>
+            <h3 class="entry-heading">
+              <span>Yuan Link <span class="meta">· Local workflow toolkit</span> <span class="chip">In progress</span></span>
+              <time class="entry-date">06/2026 – Present</time>
+            </h3>
+            <p class="subtext">
+              Designing a controlled CRM foundation for a matchmaking charity program: CSV/DOCX
+              data migration, database-backed record management, and AI-assisted information
+              extraction. Early stage, with a FastAPI and Postgres skeleton in place.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-heading">
         <h2 id="experience-heading">Experience</h2>
         <ul>
           <li>
@@ -156,114 +398,6 @@
         </ul>
       </section>
 
-      <section aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Selected Projects</h2>
-        <ul>
-          <li>
-            <h3 class="entry-heading">
-              <span>
-                Reinforcement Learning from Pixels
-                <span class="meta">· CMU IDL</span>
-              </span>
-              <time class="entry-date">08/2026 – Present</time>
-            </h3>
-            <p class="subtext">
-              Researching DreamerV1-style latent world models for visual control from pixels,
-              with responsibility for literature review and training scripts for DeepMind Control
-              Suite experiments.
-            </p>
-          </li>
-          <li>
-            <h3 class="entry-heading">
-              <span>
-                GPU Inference Benchmarking
-              </span>
-              <time class="entry-date">08/2026 – Present</time>
-            </h3>
-            <p class="subtext">
-              Building a controlled benchmarking workflow to compare vLLM and Hugging Face
-              Transformers across A100 and V100 GPUs, concurrency levels, and context lengths.
-            </p>
-          </li>
-          <li>
-            <h3 class="entry-heading">
-              <span>
-                Yuan Link
-                <span class="meta">· Local workflow toolkit</span>
-              </span>
-              <time class="entry-date">06/2026 – Present</time>
-            </h3>
-            <p class="subtext">
-              Designing a controlled CRM foundation for a matchmaking charity program, spanning
-              CSV/DOCX data migration, SQLite-backed record management, and AI-assisted
-              information extraction.
-            </p>
-          </li>
-          <li>
-            <h3 class="entry-heading">
-              <span>
-                Multi-Horizon Power Outage Forecasting
-                <span class="meta">· INFORMS 2026 Data Mining Society Data Challenge</span>
-              </span>
-              <time class="entry-date">08/2026 – 09/2026</time>
-            </h3>
-            <p class="subtext">
-              Developed a multi-horizon power outage forecasting pipeline using ExtraTrees,
-              LightGBM, and CatBoost, with county-disjoint cross-validation to evaluate
-              generalization to unseen counties.
-            </p>
-          </li>
-          <li>
-            <h3 class="entry-heading">
-              <span>
-                <a href="https://github.com/DDaniel-code/wifi-signal-decoding"
-                  >Wi-Fi Signal Decoding</a
-                >
-                <span class="meta">· UNC Data Science Practicum</span>
-              </span>
-              <time class="entry-date">01/2026 – 05/2026</time>
-            </h3>
-            <p class="subtext">
-              Evaluated CNN and masked-autoencoder approaches for decoding 24-bit Wi-Fi headers
-              from low-bandwidth IQ signals. Mentored by Dr. Zhihui Gao.
-            </p>
-          </li>
-          <li>
-            <h3 class="entry-heading">
-              <span>
-                <a href="https://github.com/JJ69c/IdeaLab">IdeaLab Persona Simulation Research</a>
-                <span class="meta">· Research collaboration with William (@JJ69c)</span>
-              </span>
-              <time class="entry-date">01/2026 – 05/2026</time>
-            </h3>
-            <p class="subtext">
-              Researched and prototyped persona design and evaluation for an AI product-idea
-              simulator.
-            </p>
-          </li>
-          <li>
-            <h3 class="entry-heading">
-              <span>Crop Diversity &amp; Insurance Risk <span class="meta">· UNC DATA 543</span></span>
-              <time class="entry-date">01/2026 – 05/2026</time>
-            </h3>
-            <p class="subtext">
-              Built a county-year modeling pipeline using USDA data to study crop diversity,
-              insurance loss ratios, and claim volatility.
-            </p>
-          </li>
-          <li>
-            <h3 class="entry-heading">
-              <span>Satellite-Based Rice Mapping <span class="meta">· Team Project</span></span>
-              <time class="entry-date">09/2025 – 12/2025</time>
-            </h3>
-            <p class="subtext">
-              Co-developed a dual-stream CNN combining radar and optical satellite imagery
-              to classify rice fields for food-security analysis.
-            </p>
-          </li>
-        </ul>
-      </section>
-
       <section aria-labelledby="volunteer-heading">
         <h2 id="volunteer-heading">Volunteer Experience</h2>
         <ul>
@@ -283,7 +417,7 @@
         </ul>
       </section>
 
-      <section aria-labelledby="education-heading">
+      <section id="education" aria-labelledby="education-heading">
         <h2 id="education-heading">Education</h2>
         <ul>
           <li>
@@ -317,16 +451,21 @@
       </section>
     </main>
 
-    <footer>
-      <p>© 2026 Zhiyuan Yang. All rights reserved.</p>
-      <p>
-        <a href="mailto:zhiyuan912912@gmail.com">Email</a>
-        <span aria-hidden="true"> · </span>
-        <a href="https://www.linkedin.com/in/daniel-yang912">LinkedIn</a>
-        <span aria-hidden="true"> · </span>
-        <a href="https://github.com/DDaniel-code">GitHub</a>
-      </p>
+    <footer id="contact">
+      <div class="contact-card">
+        <h2>Let’s talk</h2>
+        <p>
+          I’m looking for Summer 2027 internships in AI/ML and data science. The fastest way to
+          reach me is email.
+        </p>
+        <p class="contact-links">
+          <a class="button button-primary" href="mailto:zhiyuan912912@gmail.com">zhiyuan912912@gmail.com</a>
+          <a class="button" href="https://www.linkedin.com/in/daniel-yang912">LinkedIn</a>
+          <a class="button" href="https://github.com/DDaniel-code">GitHub</a>
+        </p>
+      </div>
+      <p class="fine">© 2026 Zhiyuan Yang. All rights reserved.</p>
     </footer>
-    <script src="script.js?v=20260910-robot-a" defer></script>
+    <script src="script.js?v=20261122-redesign-a" defer></script>
   </body>
 </html>
