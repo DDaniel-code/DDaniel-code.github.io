@@ -1,20 +1,33 @@
 (() => {
-  // CareMatch gallery: a thumbnail swaps the large screenshot.
-  const image = document.getElementById("feature-image");
-  const link = document.getElementById("feature-link");
-  const thumbs = [...document.querySelectorAll(".thumb")];
-  thumbs.forEach((thumb) => {
-    thumb.addEventListener("click", () => {
-      image.src = thumb.dataset.full;
-      image.alt = thumb.dataset.alt;
-      link.href = thumb.dataset.full;
-      thumbs.forEach((other) => {
-        const active = other === thumb;
-        other.classList.toggle("is-active", active);
-        other.setAttribute("aria-pressed", String(active));
+  // Project carousel: arrows move one card, the bar shows the position.
+  const track = document.querySelector(".carousel-track");
+  if (track) {
+    const buttons = [...document.querySelectorAll(".carousel-button")];
+    const bar = document.querySelector(".carousel-progress span");
+    const step = () => {
+      const cards = track.querySelectorAll(".card");
+      return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth;
+    };
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      const share = track.clientWidth / track.scrollWidth;
+      const at = max > 0 ? track.scrollLeft / max : 0;
+      bar.style.width = `${Math.min(100, share * 100)}%`;
+      bar.style.marginLeft = `${at * (1 - share) * 100}%`;
+      buttons.forEach((button) => {
+        const back = button.dataset.dir === "-1";
+        button.disabled = back ? track.scrollLeft <= 2 : track.scrollLeft >= max - 2;
+      });
+    };
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        track.scrollBy({ left: Number(button.dataset.dir) * step(), behavior: "smooth" });
       });
     });
-  });
+    track.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
 
   // The top bar gets a rule once the page has scrolled under it.
   const nav = document.querySelector(".site-nav");

@@ -26,7 +26,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,400..600&family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20261122-redesign-a" />
+    <link rel="stylesheet" href="styles.css?v=20261122-carousel-a" />
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -133,74 +133,76 @@
 
     <main id="content">
       <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Projects</h2>
+        <div class="section-head">
+          <h2 id="projects-heading">Projects</h2>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-button" data-dir="-1" aria-label="Previous projects">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4l-6 6 6 6" /></svg>
+            </button>
+            <button type="button" class="carousel-button" data-dir="1" aria-label="Next projects">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6" /></svg>
+            </button>
+          </div>
+        </div>
 
-        <article class="feature">
-          <div class="feature-media">
-            <a class="shot" id="feature-link" href="assets/carematch-results.webp">
-              <img
-                id="feature-image"
-                src="assets/carematch-results.webp"
-                width="1600"
-                height="1000"
-                alt="CareMatch results for dialysis in Delhi: three facilities with quoted evidence, next to a map"
-              />
+        <div class="carousel-track" tabindex="0" role="group" aria-label="Projects. Scroll sideways for more.">
+          <article class="card">
+            <a class="shot" href="https://github.com/DDaniel-code/carematch">
+              <img src="assets/carematch-results.webp" width="1600" height="1000" loading="lazy"
+                alt="CareMatch results for dialysis in Delhi: three facilities with quoted evidence, next to a map" />
             </a>
-            <div class="thumbs" role="group" aria-label="More CareMatch screenshots">
-              <button type="button" class="thumb is-active" aria-pressed="true"
-                data-full="assets/carematch-results.webp"
-                data-alt="CareMatch results for dialysis in Delhi: three facilities with quoted evidence, next to a map">
-                <img src="assets/carematch-results.webp" width="1600" height="1000" alt="" loading="lazy" />
-                <span>Results</span>
-              </button>
-              <button type="button" class="thumb" aria-pressed="false"
-                data-full="assets/carematch-evidence.webp"
-                data-alt="CareMatch evidence details for one facility: what the records say and why the evidence tier was assigned">
-                <img src="assets/carematch-evidence.webp" width="1600" height="1000" alt="" loading="lazy" />
-                <span>Evidence</span>
-              </button>
-              <button type="button" class="thumb" aria-pressed="false"
-                data-full="assets/carematch-plan.webp"
-                data-alt="CareMatch verification map for planners: a three-call plan aimed at areas where caesareans are rare">
-                <img src="assets/carematch-plan.webp" width="1600" height="1000" alt="" loading="lazy" />
-                <span>Call plan</span>
-              </button>
-              <button type="button" class="thumb" aria-pressed="false"
-                data-full="assets/carematch-home.webp"
-                data-alt="CareMatch home page with the search form">
-                <img src="assets/carematch-home.webp" width="1600" height="1000" alt="" loading="lazy" />
-                <span>Home</span>
-              </button>
+            <div class="card-body">
+              <p class="kicker">CMU × Databricks Datathon · Nov 2026</p>
+              <h3><a href="https://github.com/DDaniel-code/carematch">CareMatch</a></h3>
+              <p>
+                Finds healthcare facilities in India from 10,088 web-extracted records and quotes the sentence each suggestion rests on. A claim-level text classifier, a positive-unlabeled model and a maximum-coverage optimizer tell NGO planners whom to call first. Built in a team of two.
+              </p>
+              <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Streamlit</li><li>Databricks</li></ul>
+              <p class="links">
+                <a href="https://github.com/DDaniel-code/carematch">Code</a>
+                <a href="https://github.com/DDaniel-code/carematch/blob/main/CareMatch.ipynb">Notebook</a>
+                <a href="https://drive.google.com/file/d/10Rhk7EOS42YudWVIZFz0DcujLDztApqp/view">Demo video</a>
+              </p>
             </div>
-          </div>
-          <div class="feature-body">
-            <p class="kicker">CMU × Databricks Datathon · Nov 2026 · Team of two</p>
-            <h3><a href="https://github.com/DDaniel-code/carematch">CareMatch</a></h3>
-            <p class="tagline">Find the right care in India, and know why to trust the answer.</p>
-            <p>
-              A health worker picks a service and a place; CareMatch returns up to three facilities
-              and quotes the sentence in each record that supports the suggestion. Under the hood: a
-              claim-level text classifier, location cross-checks, a positive-unlabeled model that
-              finds facilities worth verifying, and a maximum-coverage optimizer that tells NGO
-              planners whom to call first.
-            </p>
-            <ul class="tags">
-              <li>Python</li><li>scikit-learn</li><li>Streamlit</li><li>Databricks</li>
-            </ul>
-            <p class="links">
-              <a href="https://github.com/DDaniel-code/carematch">Code</a>
-              <a href="https://github.com/DDaniel-code/carematch/blob/main/CareMatch.ipynb">Notebook</a>
-              <a href="https://drive.google.com/file/d/10Rhk7EOS42YudWVIZFz0DcujLDztApqp/view">Demo video</a>
-            </p>
-          </div>
-          <ul class="facts">
-            <li><strong>10,088</strong><span>web-extracted facility records</span></li>
-            <li><strong>9%</strong><span>of caesarean keyword matches are real claims</span></li>
-            <li><strong>0.84</strong><span>ROC-AUC on regions the model never saw</span></li>
-          </ul>
-        </article>
+          </article>
 
-        <div class="cards">
+          <article class="card">
+            <a class="shot shot-figure" href="https://github.com/DDaniel-code/2026-data-challenge-forecasting">
+              <img src="assets/forecasting-pipeline.svg" width="1200" height="750" loading="lazy"
+                alt="Diagram of the forecasting pipeline: observed history, known-future covariates and temporal descriptors feed leakage-safe features, three tree-based models and a fixed blend that forecasts 1, 6, 24 and 48 hours ahead" />
+            </a>
+            <div class="card-body">
+              <p class="kicker">INFORMS 2026 Data Challenge · Aug – Sep 2026</p>
+              <h3><a href="https://github.com/DDaniel-code/2026-data-challenge-forecasting">Multi-Horizon Power Outage Forecasting</a></h3>
+              <p>
+                Developed a multi-horizon power outage forecasting pipeline using ExtraTrees, LightGBM, and CatBoost, with county-disjoint cross-validation to evaluate generalization to unseen counties.
+              </p>
+              <ul class="tags"><li>LightGBM</li><li>CatBoost</li><li>scikit-learn</li></ul>
+              <p class="links">
+                <a href="https://github.com/DDaniel-code/2026-data-challenge-forecasting">Code</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="shot" href="https://github.com/DDaniel-code/UNC-wifi-signal-decoding">
+              <img src="assets/wifi-poster.webp" width="1400" height="1050" loading="lazy"
+                alt="Poster: Decoding Wi-Fi Packet Signals Using Deep Learning, with the pipeline, per-bit accuracy and results table" />
+            </a>
+            <div class="card-body">
+              <p class="kicker">UNC Data Science Practicum · Jan – May 2026</p>
+              <h3><a href="https://github.com/DDaniel-code/UNC-wifi-signal-decoding">Wi-Fi Signal Decoding</a></h3>
+              <p>
+                Evaluated CNN and masked-autoencoder approaches for decoding 24-bit Wi-Fi headers from low-bandwidth IQ signals. Mentored by Dr. Zhihui Gao. The image is the team’s practicum poster.
+              </p>
+              <ul class="tags"><li>PyTorch</li><li>Masked autoencoders</li><li>Signal processing</li></ul>
+              <p class="links">
+                <a href="https://github.com/DDaniel-code/UNC-wifi-signal-decoding">Code</a>
+                <a href="https://github.com/DDaniel-code/UNC-wifi-signal-decoding#posters">Posters</a>
+              </p>
+            </div>
+          </article>
+
           <article class="card">
             <a class="shot" href="https://github.com/JJ69c/IdeaLab">
               <img src="assets/idealab.webp" width="1200" height="750" loading="lazy"
@@ -210,29 +212,12 @@
               <p class="kicker">Research collaboration · Jan – May 2026</p>
               <h3><a href="https://github.com/JJ69c/IdeaLab">IdeaLab</a></h3>
               <p>
-                A synthetic-population idea tester: 30 AI personas across 8 behavioural archetypes
-                react to a product idea, talk to each other, and adopt or reject it over eight
-                rounds. I researched and prototyped persona design and evaluation, with William
-                (@JJ69c).
+                A synthetic-population idea tester: 30 AI personas across 8 behavioural archetypes react to a product idea, talk to each other, and adopt or reject it over eight rounds. I researched and prototyped persona design and evaluation, with William (@JJ69c).
               </p>
               <ul class="tags"><li>LLM agents</li><li>FastAPI</li><li>React</li><li>SQLite</li></ul>
-            </div>
-          </article>
-
-          <article class="card">
-            <a class="shot shot-figure" href="https://github.com/DDaniel-code/UNC-wifi-signal-decoding">
-              <img src="assets/wifi-results.webp" width="1200" height="711" loading="lazy"
-                alt="Bar chart of exact-match accuracy on the test set for DeepMon, RIS-MAE and CrossMAE variants" />
-            </a>
-            <div class="card-body">
-              <p class="kicker">UNC Data Science Practicum · Jan – May 2026</p>
-              <h3><a href="https://github.com/DDaniel-code/UNC-wifi-signal-decoding">Wi-Fi Signal Decoding</a></h3>
-              <p>
-                Evaluated CNN and masked-autoencoder approaches for decoding 24-bit Wi-Fi headers
-                from low-bandwidth IQ signals. Mentored by Dr. Zhihui Gao. The chart is from the
-                project’s recorded results.
+              <p class="links">
+                <a href="https://github.com/JJ69c/IdeaLab">Code</a>
               </p>
-              <ul class="tags"><li>PyTorch</li><li>Masked autoencoders</li><li>Signal processing</li></ul>
             </div>
           </article>
 
@@ -242,54 +227,37 @@
                 alt="Training return over 100,000 environment steps for a single-seed Cartpole swing-up pilot" />
             </a>
             <div class="card-body">
-              <p class="kicker">CMU 11-785 Intro to Deep Learning · Aug 2026 – present <span class="chip">In progress</span></p>
+              <p class="kicker">CMU 11-785 · Aug 2026 – present <span class="chip">In progress</span></p>
               <h3><a href="https://github.com/DDaniel-code/dreamer-pixels">Reinforcement Learning from Pixels</a></h3>
               <p>
-                Researching DreamerV1-style latent world models for visual control from pixels, with
-                responsibility for literature review and training scripts for DeepMind Control Suite
-                experiments. The curve is a single-seed pilot run.
+                Researching DreamerV1-style latent world models for visual control from pixels, with responsibility for literature review and training scripts for DeepMind Control Suite experiments. The curve is a single-seed pilot run.
               </p>
               <ul class="tags"><li>PyTorch</li><li>World models</li><li>DeepMind Control Suite</li></ul>
+              <p class="links">
+                <a href="https://github.com/DDaniel-code/dreamer-pixels">Code</a>
+              </p>
             </div>
           </article>
 
           <article class="card">
             <div class="shot">
               <img src="assets/retention-agent.webp" width="1200" height="750" loading="lazy"
-                alt="Risk dashboard of the John Data Lab course's customer-retention reference app, running locally" />
+                alt="Risk dashboard of the John Data Lab customer-retention reference app, running locally" />
             </div>
             <div class="card-body">
-              <p class="kicker">John Data Lab · AI agent cohort <span class="chip">Project, in progress</span></p>
+              <p class="kicker">AI Agent Project · Nov 2026 – present <span class="chip">In progress</span></p>
               <h3>Enterprise Retention Agent</h3>
               <p>
-                Working through an end-to-end reference system: ETL and data-quality checks, a churn
-                model, and a multi-agent retention copilot served through FastAPI and Streamlit. The
-                screenshot is the course’s reference app running on my machine; my own extensions
-                come next.
+                Working through John Data Lab’s end-to-end reference system: ETL and data-quality checks, a churn model, and a multi-agent retention copilot served through FastAPI and Streamlit. The screenshot is the course’s reference app running on my machine; my own extensions come next.
               </p>
               <ul class="tags"><li>ETL</li><li>Churn modeling</li><li>Agents</li><li>FastAPI</li></ul>
             </div>
           </article>
         </div>
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
 
         <h3 class="more-heading">More work</h3>
         <ul class="entries">
-          <li>
-            <h3 class="entry-heading">
-              <span>
-                <a href="https://github.com/DDaniel-code/2026-data-challenge-forecasting"
-                  >Multi-Horizon Power Outage Forecasting</a
-                >
-                <span class="meta">· INFORMS 2026 Data Mining Society Data Challenge</span>
-              </span>
-              <time class="entry-date">08/2026 – 09/2026</time>
-            </h3>
-            <p class="subtext">
-              Developed a multi-horizon power outage forecasting pipeline using ExtraTrees,
-              LightGBM, and CatBoost, with county-disjoint cross-validation to evaluate
-              generalization to unseen counties.
-            </p>
-          </li>
           <li>
             <h3 class="entry-heading">
               <span>
@@ -466,6 +434,6 @@
       </div>
       <p class="fine">© 2026 Zhiyuan Yang. All rights reserved.</p>
     </footer>
-    <script src="script.js?v=20261122-redesign-a" defer></script>
+    <script src="script.js?v=20261122-carousel-a" defer></script>
   </body>
 </html>

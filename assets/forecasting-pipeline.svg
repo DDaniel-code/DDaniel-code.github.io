@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="1200" height="750" fill="#ffffff"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#8a8378"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#8a8378" stroke-width="2.5" marker-end="url(#a)">
+    <path d="M210 196V246"/><path d="M600 196V246"/><path d="M990 196V246"/>
+    <path d="M300 336V386"/><path d="M600 336V386"/><path d="M900 336V386"/>
+    <path d="M300 476V526"/><path d="M600 476V526"/><path d="M900 476V526"/>
+    <path d="M600 606V640"/>
+  </g>
+  <g font-size="19" font-weight="700" fill="#8a8378" letter-spacing="1.5">
+    <text x="60" y="78">INPUTS</text>
+  </g>
+  <g stroke="#d9d2c5" stroke-width="2" fill="#faf7f1">
+    <rect x="60" y="106" width="300" height="90" rx="14"/>
+    <rect x="450" y="106" width="300" height="90" rx="14"/>
+    <rect x="840" y="106" width="300" height="90" rx="14"/>
+  </g>
+  <g font-size="24" fill="#23211e" text-anchor="middle">
+    <text x="210" y="146" font-weight="700">Observed history</text>
+    <text x="210" y="176" font-size="19" fill="#68635b">up to the cutoff only</text>
+    <text x="600" y="146" font-weight="700">Known-future covariates</text>
+    <text x="600" y="176" font-size="19" fill="#68635b">at the target time</text>
+    <text x="990" y="146" font-weight="700">Origin and horizon</text>
+    <text x="990" y="176" font-size="19" fill="#68635b">temporal descriptors</text>
+  </g>
+  <rect x="60" y="246" width="1080" height="90" rx="14" fill="#23211e"/>
+  <text x="600" y="286" font-size="25" font-weight="700" fill="#ffffff" text-anchor="middle">Leakage-safe feature construction</text>
+  <text x="600" y="316" font-size="19" fill="#d6cfc3" text-anchor="middle">entity-disjoint folds: evaluation entities are never seen in training</text>
+  <g stroke-width="2">
+    <rect x="165" y="386" width="270" height="90" rx="14" fill="#fbe9df" stroke="#d86f43"/>
+    <rect x="465" y="386" width="270" height="90" rx="14" fill="#e3f0ef" stroke="#4f9995"/>
+    <rect x="765" y="386" width="270" height="90" rx="14" fill="#ece6f2" stroke="#846d9b"/>
+  </g>
+  <g font-size="25" font-weight="700" fill="#23211e" text-anchor="middle">
+    <text x="300" y="440">Extra Trees</text>
+    <text x="600" y="440">LightGBM</text>
+    <text x="900" y="440">CatBoost</text>
+  </g>
+  <rect x="60" y="526" width="1080" height="80" rx="14" fill="#faf7f1" stroke="#d9d2c5" stroke-width="2"/>
+  <text x="600" y="575" font-size="24" font-weight="700" fill="#23211e" text-anchor="middle">Fixed per-horizon blend, frozen before inference</text>
+  <g font-size="22" font-weight="700" text-anchor="middle">
+    <g fill="#c95f33">
+      <rect x="255" y="650" width="150" height="54" rx="27" fill="#fbe9df"/><text x="330" y="685">+1 hour</text>
+      <rect x="435" y="650" width="150" height="54" rx="27" fill="#fbe9df"/><text x="510" y="685">+6 hours</text>
+      <rect x="615" y="650" width="150" height="54" rx="27" fill="#fbe9df"/><text x="690" y="685">+24 hours</text>
+      <rect x="795" y="650" width="150" height="54" rx="27" fill="#fbe9df"/><text x="870" y="685">+48 hours</text>
+    </g>
+  </g>
+</svg>
